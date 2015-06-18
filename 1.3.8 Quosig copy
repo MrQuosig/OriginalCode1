@@ -1,0 +1,15 @@
+from __future__ import print_function # use Python 3.0 printing
+import random
+
+def goGuess():
+    secret = random.randint(1, 4)
+    guess = 5
+    while guess != secret:
+        print('I have a number between 1 and 4.')
+        guess = int(raw_input('Guess: '))
+        if guess > secret:
+            print('Too high - my number was', secret,' Try again!')
+        elif guess < secret:
+            print('Too low - my number was', secret,' Try again!')
+        
+    print('Right, my number is', guess, end='!\n')
